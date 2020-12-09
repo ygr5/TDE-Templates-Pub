@@ -1,0 +1,30 @@
+# Created 191127 by Lynn Woodruff
+# This template is for reference when creating other templates on the fly via automation.
+# Revisions
+# 191127 New
+
+[Template]
+TemplateVersion = 1.0
+TableID = Table-1.0
+TemplateName = LW_Table_R
+Intent = Retrieve
+Format = CSV
+#Format = JSON
+Commit = True # For Retrieve ONLY
+#Commit = False # For Updates and Creates
+InputHeader = True
+Output = CompleteSuccessful
+#OrderBy = Input.Id
+#OrderBy = Input.Tag
+
+#[Output] Notes
+#Id = Input.Id
+#Apply units of measure when necessary for Distance, Speed, Angle, FuelEfficiency, Temperature, Volume, TimeInterval, Acceleration, ElectricCurrent, ElectricPotential, Energy, FlowRate, Frequency, Illuminance, Pressure, Torque, Weight
+#https://api.telogis.com/documentation/html/2d1fb06b-a566-4361-81bc-91243977f35f.htm
+
+[Output]
+Id = Input.Id       #The ID of the table.
+IsCustom = Input.IsCustom
+IsUiVisible = Input.IsUiVisible
+Name = Input.Name       #The name of the table.
+SupportedOperations = Input.SupportedOperations       #The operations that the table supports. Values: Create, Retrieve, Update, Delete.
